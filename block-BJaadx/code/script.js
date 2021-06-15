@@ -1,10 +1,14 @@
 // 1. Change the title of the page to `Hello AltCampus!`
+document.querySelector(`title`).innerText = `Hello AltCampus`;
 
 // 2. Select the element using the children property:
 
+
 //    - Select the `h1` element and change the value to `Learning DOM`
+document.getElementById(`test`).innerText = `Learning DOM`;
 
 //    - Select the first `li` element inside the `ul` with class `topics` and change the innerText to `all about document`
+ document.querySelector(`topics`)
 //    - Select the input element with name `email`
 
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
@@ -26,6 +30,7 @@
 // 11. Select all the input element of any type and store in `allInput`
 
 // 12. Use forEach to console the `innerText` property of all the li element in `allTopics` variable.
+
 
 // 13. Select all the elements with class `list` and store in variable `listOfSelectedTopics`
 

@@ -148,3 +148,8 @@ console.log(fieldsetElm)
 // 27. Select the parent element of the element stored in `fieldsetElm` variable (#5) and log the `typeof` the element.
 
 console.log( typeof fieldsetElm.parentElement);
+
+
+
+
+/

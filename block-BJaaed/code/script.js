@@ -1,4 +1,5 @@
- let books = [
+ let allBooks = {
+     books :[
     {
       isbn: "9781593275846",
       title: "Eloquent JavaScript, Second Edition",
@@ -114,33 +115,78 @@
       website: "https://shichuan.github.io/javascript-patterns/",
     },
   ]
+}
 
 let ul = document.querySelector("ul")
 
- books.forEach((ele) =>{
+ allBooks.books.forEach((ele) =>{
     let li = document.createElement(`li`);
     let image = document.createElement(`img`);
 
     image.classList.add(`width`)
  
     image.src = ele.image;
+
+    image.alt = ele.title;
  
     let h2 = document.createElement(`h2`);
  
-    h2 = ele.title;
+    h2.innerText = ele.title;
+
+
+    h2.style.paddingTop = "10px";
  
     let p = document.createElement(`p`);
+
+    p.innerText = "Author:";
+
+    p.style.fontSize = "16px";
+
+    p.style.color = "grey";
+
+    p.style.padding = "10px";
+
+    p.style.paddingBottom = "30px";
  
-    p = ele.subtitle;
  
+    let span = document.createElement(`span`);
+
+    p.append(span);
+    
+    let authorName = document.createTextNode( ele.author);
+
+    span.append(authorName);
+
     let btn = document.createElement(`button`);
+
+    btn.style.backgroundColor = "rgb(55,126,128)";
+
+    btn.style.color = "white";
+
+    btn.style.borderStyle = "none"; 
+
+    btn.style.padding = "8px";
+
+    btn.style.paddingLeft = "15px";
+
+    btn.style.paddingRight = "15px";
  
-    btn = ele.website
+    btn.style.borderRadius = "5px";
+
+    btn.innerHTML = `<a href= ${ele.website}> Buy Now </a>`
  
     li.append(image , h2, p, btn);
+
+    li.style.paddingBottom = " 20px";
  
 
     li.classList.add(`flex-30`)
+
+    li.classList.add(`margin`);
+
+    li.classList.add(`padding`);
+
+    li.classList.add(`text-center`)
 
 
     ul.append(li);
@@ -149,4 +195,9 @@ let ul = document.querySelector("ul")
  )
 
 
+ let a = document.querySelectorAll(`a`);
+
+ a.forEach((ele) => ele.style.textDecoration = "none");
+
+ a.forEach((ele) => ele.style.color = "white");
 
